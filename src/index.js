@@ -2,24 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { store } from './app/store';
-import { Provider } from 'react-redux';
-import { extendedApiSlice } from './features/posts/postsSlice';
-import { fetchUsers } from './features/users/usersSlice';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {QueryClient , QueryClientProvider} from 'react-query';
+import {ReactQueryDevtools} from 'react-query/devtools'
 
-store.dispatch(extendedApiSlice.endpoints.getPosts.initiate());
-store.dispatch(fetchUsers());
-
+const queryClient = new QueryClient()
+ 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
+    <QueryClientProvider client={queryClient}>
       <Router>
         <Routes>
           <Route path="/*" element={<App />} />
         </Routes>
       </Router>
-    </Provider>
+      <ReactQueryDevtools initialIsOpen />
+    </QueryClientProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
