@@ -1,12 +1,12 @@
-import Layout from "./components/Layout";
-import { Routes, Route, Navigate } from 'react-router-dom';
-import ComponentLang from "./ComponentLang";
-import TodosList from "./features/todos/TodosList";
+import { Routes, Route } from 'react-router-dom';
+import Home from "./components/Home";
+import Todos from './components/Todos';
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<TodosList />}  />
+      <Route path="/" element={<Home />}  />
+      <Route path="/todos" element={<Todos />}  />
     </Routes>
   );
 }
