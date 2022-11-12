@@ -12,6 +12,13 @@
               run: npm install                    
             - name: build project
               run: npm run build 
+              name: Sets the vercel env
+              run: |
+              cd build
+              mkdir .vercel
+              cd .vercel
+              touch project.json
+              echo '{"projectId":"prj_GWWEAy3uRIdJyQt3Gp06iWfLdsUc", "orgId":"TSkEpztSht7BGC4e21Y2umTs" > product.json
             - name: deploy project
               env: 
                 VERCEL_ORG_ID: TSkEpztSht7BGC4e21Y2umTs
