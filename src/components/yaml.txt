@@ -17,3 +17,19 @@ service: !
   my name is mustafa 
   age is 21 years old 
   i am front end 
+ 
+ 
+ 
+ name: my first github action
+ on: [push]
+ jobs: 
+    print-hello-world:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "hello world!"
+            - run: echo "step number 1"
+    print-hello-world2:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "hello world!"
+            - run: echo "step number 2"
