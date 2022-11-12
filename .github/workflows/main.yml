@@ -6,10 +6,11 @@
         steps:
             - uses: actions/checkout@v3
             - uses: actions/setup-node@v3
-            with:
-                node-version: 16
+                with:
+                    node-version: 16
             - name: build project
                 run: npm build 
             - name: setup finish
                 run: echo "hurray" 
             - run: tree
+
