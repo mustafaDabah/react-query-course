@@ -13,7 +13,7 @@
             - name: build project
               run: npm run build 
             - name: vercel build
-              run: vercel build 
+              run: npx vercel build 
             - name: vercel debloy
-              run: vercel deploy --prebuilt
+              run: npx vercel deploy --prebuilt
 
