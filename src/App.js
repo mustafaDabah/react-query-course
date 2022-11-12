@@ -1,6 +1,4 @@
-import Layout from "./components/Layout";
-import { Routes, Route, Navigate } from 'react-router-dom';
-import ComponentLang from "./ComponentLang";
+import { Routes, Route } from 'react-router-dom';
 import TodosList from "./features/todos/TodosList";
 
 function App() {
