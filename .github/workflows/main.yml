@@ -12,7 +12,11 @@
               run: npm install                    
             - name: build project
               run: npm run build 
-            - name: setup finish
-              run: echo "hurray" 
+            - name: deploy project
+              env: 
+                VERCEL_ORG_ID: TSkEpztSht7BGC4e21Y2umTs
+                VERCEL PROJECT_ID: prj_GWWEAy3uRIdJyQt3Gp06iWfLdsUc
+              run: npm run deploy 
+
             - run: tree
 
