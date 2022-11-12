@@ -16,7 +16,7 @@ function ComponentLang() {
         document.body.dir = 'ltr' 
       }
       document.title = t('app_title')
-    } ,[getCurrentLang])
+    } ,[getCurrentLang , t])
 
   return (
     <div>
