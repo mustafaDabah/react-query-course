@@ -22,7 +22,7 @@
             - name: build project
               run: npm run build 
     deploy-app:
-        needs: build app 
+        needs: build-app 
         runs-on: ubuntu-latest
         steps:
             - name: Install Vercel CLI
