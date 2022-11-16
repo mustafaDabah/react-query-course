@@ -13,7 +13,6 @@
                  key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
                  restore-keys: |
                   ${{ runner.os }}-node-
-            - run: package-installer packages.txt
               if: steps.cache-packages.outputs.cache-hit != 'true'      
             - uses: actions/checkout@v3
             - uses: actions/setup-node@v3
