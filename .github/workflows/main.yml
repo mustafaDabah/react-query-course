@@ -12,7 +12,7 @@
                  path: node_module
                  key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
                  restore-keys: |
-                 ${{ runner.os }}-node-
+                  ${{ runner.os }}-node-
             - uses: actions/checkout@v3
             - uses: actions/setup-node@v3
               with:
