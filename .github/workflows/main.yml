@@ -33,7 +33,7 @@
         needs: build-app 
         runs-on: ubuntu-latest
         steps:
-           run: echo "mustafa"
+           - run: echo "mustafa"
                    
 
 
