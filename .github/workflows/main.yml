@@ -18,8 +18,24 @@
               run: npm install                    
             - name: build project
               run: npm run build 
-            - name: vercel build
-              run: vc --cwd build
-            - name: vercel debloy
-              run: npx vercel deploy --prebuilt
+           
 
+
+name: Vercel Preview Deployment
+env:
+  VERCEL_ORG_ID: TSkEpztSht7BGC4e21Y2umTs
+  VERCEL_PROJECT_ID: prj_GWWEAy3uRIdJyQt3Gp06iWfLdsUc
+on: [push]
+jobs:
+  Deploy-Preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=preview --token=xpD9UO4frxANkDEfyNRFnrA8
+      - name: Build Project Artifacts
+        run: vercel build --token=xpD9UO4frxANkDEfyNRFnrA8
+      - name: Deploy Project Artifacts to Vercel
+        run: vercel deploy --prebuilt --token=xpD9UO4frxANkDEfyNRFnrA8
