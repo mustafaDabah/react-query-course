@@ -18,12 +18,12 @@
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.0"
-  },
+  }, 
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "deploy": "vc build --prod --confirm --token=UVVL4FdMflK8iVy4k26jab8n"
+    "deploy": "vc build --prod "
   },
   "eslintConfig": {
     "extends": [
