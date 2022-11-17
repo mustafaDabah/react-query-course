@@ -20,7 +20,7 @@
               with:
                     node-version: 16
             - name: install node_module
-              run: npm install                    
+              run: npm ci                     
             - name: build project
               run: npm run build 
             - name: Install Vercel CLI
